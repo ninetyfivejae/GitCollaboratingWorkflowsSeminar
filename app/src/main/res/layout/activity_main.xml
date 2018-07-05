@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.example.jaehyukshin.gitcollaboratingworkflowsseminar.MainActivity">
 
     <TextView
@@ -16,9 +17,15 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/messiButton"
+        android:id="@+id/teamButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Lionel Messi" />
+        android:text="Lionel Messi's team" />
 
-</android.support.constraint.ConstraintLayout>
+    <Button
+        android:id="@+id/stadiumButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lionel Messi's stadium" />
+
+</LinearLayout>

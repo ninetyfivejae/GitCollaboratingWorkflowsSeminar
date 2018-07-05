@@ -12,6 +12,8 @@ public class MainActivity extends AppCompatActivity {
     EditText firstNumber;
     EditText secondNumber;
     Button plusButton;
+    Button minusButton;
+    Button multiplyButton;
     TextView result;
 
     @Override
@@ -22,8 +24,10 @@ public class MainActivity extends AppCompatActivity {
         firstNumber = (EditText)findViewById(R.id.firstNumber);
         secondNumber = (EditText)findViewById(R.id.secondNumber);
         result = (TextView)findViewById(R.id.result);
-
         plusButton = (Button)findViewById(R.id.plusButton);
+        minusButton = (Button)findViewById(R.id.minusButton);
+        multiplyButton = (Button)findViewById(R.id.multiplyButton);
+
         plusButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -31,5 +35,24 @@ public class MainActivity extends AppCompatActivity {
                 result.setText(Integer.toString(resultNumber));
             }
         });
+
+        minusButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                MinusOperation();
+            }
+        });
+
+        multiplyButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+    }
+
+    public void MinusOperation(){
+        int resultNumber = Integer.parseInt(firstNumber.getText().toString()) - Integer.parseInt(secondNumber.getText().toString());
+        result.setText(Integer.toString(resultNumber));
     }
 }

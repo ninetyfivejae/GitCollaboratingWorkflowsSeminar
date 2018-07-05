@@ -31,8 +31,7 @@ public class MainActivity extends AppCompatActivity {
         plusButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int resultNumber = Integer.parseInt(firstNumber.getText().toString()) + Integer.parseInt(secondNumber.getText().toString());
-                result.setText(Integer.toString(resultNumber));
+                PlusOperation();
             }
         });
 
@@ -49,6 +48,11 @@ public class MainActivity extends AppCompatActivity {
                 MultiplyOperation();
             }
         });
+    }
+
+    public void PlusOperation(){
+        int resultNumber = Integer.parseInt(firstNumber.getText().toString()) + Integer.parseInt(secondNumber.getText().toString());
+        result.setText(Integer.toString(resultNumber));
     }
 
     public void MinusOperation() {
